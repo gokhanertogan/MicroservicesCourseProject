@@ -8,8 +8,8 @@ namespace CourseServices.Catalog.Settings
     public class DatabaseSettings : IDatabaseSettings
     {
         public string CourseCollectionName { get; set; }
-        public string CategoryCollectionName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string ConnectionString { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string DatabaseName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string CategoryCollectionName { get; set; }
+        public string ConnectionString { get; set; }
+        public string DatabaseName { get; set; }
     }
 }

@@ -11,7 +11,7 @@ using Course.Shared.Dtos;
 
 namespace CourseServices.Catalog.Services
 {
-    internal class CourseService: ICourseService
+    public class CourseService: ICourseService
     {
         private readonly IMongoCollection<Models.Course> _courseCollection;
         private readonly IMongoCollection<Models.Category> _categoryCollection;
