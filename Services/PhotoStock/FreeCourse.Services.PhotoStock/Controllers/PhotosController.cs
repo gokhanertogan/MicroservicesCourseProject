@@ -22,6 +22,7 @@ namespace FreeCourse.Services.PhotoStock.Controllers
             if (photo != null && photo.Length > 0)
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/photos", photo.FileName);
+                Directory.CreateDirectory(Path.GetDirectoryName(path));
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
@@ -38,9 +39,10 @@ namespace FreeCourse.Services.PhotoStock.Controllers
             return CreateActionResultInstance(Response<PhotoDto>.Fail("photo is empty", 400));
         }
 
+        [HttpDelete]
         public IActionResult PhotoDelete(string photoUrl)
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwwroot/photos", photoUrl);
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/photos", photoUrl);
 
             if (!System.IO.File.Exists(path))
             {

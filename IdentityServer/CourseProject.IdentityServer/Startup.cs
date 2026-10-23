@@ -86,7 +86,6 @@ namespace CourseProject.IdentityServer
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
-            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();

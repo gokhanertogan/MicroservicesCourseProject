@@ -29,14 +29,15 @@ namespace CourseServices.Basket.Controllers
         [HttpPost]
         public async Task<IActionResult> SaveOrUpdateBasket(BasketDto basketDto)
         {
+            basketDto.UserId = _sharedIdentityService.GetUserId;
             var response = await _basketService.SaveOrUpdate(basketDto);
             return CreateActionResultInstance(response);
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteBasket(string userId)
+        public async Task<IActionResult> DeleteBasket()
         {
-            return CreateActionResultInstance(await _basketService.Delete(userId));
+            return CreateActionResultInstance(await _basketService.Delete(_sharedIdentityService.GetUserId));
         }
     }
 }

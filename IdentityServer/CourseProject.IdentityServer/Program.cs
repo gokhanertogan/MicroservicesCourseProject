@@ -58,7 +58,7 @@ namespace CourseProject.IdentityServer
                             UserName="gertogan",
                             Email="gokhanertogan",
                             City="Istanbul"
-                        },"Your_password123").Wait();
+                        },"Password12*").Wait();
                     }
                 }
 
