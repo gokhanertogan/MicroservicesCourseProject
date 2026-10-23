@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+# macOS
+.DS_Store
+
+# IdentityServer developer signing key (generated at runtime)
+tempkey.jwk
